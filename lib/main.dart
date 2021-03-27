@@ -12,7 +12,7 @@ class BMICalc extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xFF0A0E21), // remove # with 0xff
+        primaryColor: Color(0xFF0A0E21), // replaced # with 0xff
         accentColor: Colors.redAccent,
         scaffoldBackgroundColor: Color(0xFF0A0E21),
         //textTheme: TextTheme(bodyText2: TextStyle(color: Color(0xffffffff)))
