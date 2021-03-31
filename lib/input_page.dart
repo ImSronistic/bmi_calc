@@ -3,6 +3,7 @@ import 'extracted_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const activeColor = Color(0xFF0A0E33);
+const intActiveColor = Color(0xff111328);
 
 class InputPage extends StatefulWidget {
   @override
@@ -10,6 +11,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleCardColour = intActiveColor;
+  Color FemaleCardColour = intActiveColor;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +25,8 @@ class _InputPageState extends State<InputPage> {
               child: Row(
             children: <Widget>[
               Expanded(
-                child: TextButton(
-                  onPressed: () {},
+                child: GestureDetector(
+                  onTap: () {},
                   child: ReusableCard(
                     colour: activeColor,
                     cardChild: IconContent(
