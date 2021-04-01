@@ -18,7 +18,6 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   gender selectedGender;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +58,7 @@ class _InputPageState extends State<InputPage> {
                   child: ReusableCard(
                     colour: selectedGender == gender.female
                         ? activeColor
-                        : inActiveColor,,
+                        : inActiveColor,
                     cardChild: IconContent(
                       iconAwesome: FontAwesomeIcons.venus,
                       iconText: 'FEMALE',
@@ -70,7 +69,7 @@ class _InputPageState extends State<InputPage> {
             ],
           )),
           Expanded(
-              child: ReusableCard(femaleCardColour
+              child: ReusableCard(
             colour: activeColor,
           )),
           Expanded(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // our own Extracted Widgets
 class IconContent extends StatelessWidget {
+  //created constructors
   IconContent({@required this.iconAwesome, @required this.iconText});
   final IconData iconAwesome;
   final String iconText;
