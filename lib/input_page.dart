@@ -30,39 +30,34 @@ class _InputPageState extends State<InputPage> {
               child: Row(
             children: <Widget>[
               Expanded(
-                child: GestureDetector(
-                  onTap: () {
+                child: ReusableCard(
+                  gestureDetector: () {
                     setState(() {
                       selectedGender = gender.male;
                     });
                   },
-                  child: ReusableCard(
-                    colour: selectedGender == gender.male
-                        ? activeColor
-                        : inActiveColor,
-                    cardChild: IconContent(
-                      iconAwesome: FontAwesomeIcons.mars,
-                      iconText: 'MALE',
-                    ),
+                  colour: selectedGender == gender.male
+                      ? activeColor
+                      : inActiveColor,
+                  cardChild: IconContent(
+                    iconAwesome: FontAwesomeIcons.mars,
+                    iconText: 'MALE',
                   ),
                 ),
               ),
               Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    //anonymous
+                child: ReusableCard(
+                  gestureDetector: () {
                     setState(() {
                       selectedGender = gender.female;
                     });
                   },
-                  child: ReusableCard(
-                    colour: selectedGender == gender.female
-                        ? activeColor
-                        : inActiveColor,
-                    cardChild: IconContent(
-                      iconAwesome: FontAwesomeIcons.venus,
-                      iconText: 'FEMALE',
-                    ),
+                  colour: selectedGender == gender.female
+                      ? activeColor
+                      : inActiveColor,
+                  cardChild: IconContent(
+                    iconAwesome: FontAwesomeIcons.venus,
+                    iconText: 'FEMALE',
                   ),
                 ),
               )
