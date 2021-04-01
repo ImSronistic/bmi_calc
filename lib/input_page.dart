@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'extracted_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-const activeColor = Color(0xFF0A0E33);
-const inActiveColor = Color(0xff111328);
+import 'constants.dart';
 
 enum gender {
   female,
@@ -65,6 +63,9 @@ class _InputPageState extends State<InputPage> {
           )),
           Expanded(
               child: ReusableCard(
+            cardChild: Column(
+              children: [Text('High.')],
+            ),
             colour: activeColor,
           )),
           Expanded(
