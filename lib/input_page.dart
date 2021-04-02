@@ -23,7 +23,7 @@ class _InputPageState extends State<InputPage> {
         title: Center(child: Text('BMI Calc')),
       ),
       body: Column(
-        //crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
               child: Row(
@@ -65,18 +65,27 @@ class _InputPageState extends State<InputPage> {
           Expanded(
               child: ReusableCard(
             cardChild: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'HEIGHT.',
+                  'HEIGHT',
                   style: klabelTextStyle,
                 ),
                 Row(
+                  //along the length of the row
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  //along the width of the row
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
                       '180',
-                      style: TextStyle(
-                          fontSize: 50.0, fontWeight: FontWeight.w900),
+                      style: klabelNumStyle,
                     ),
+                    Text(
+                      'cm',
+                      style: klabelTextStyle,
+                    )
                   ],
                 )
               ],
