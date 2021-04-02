@@ -23,6 +23,7 @@ class _InputPageState extends State<InputPage> {
         title: Center(child: Text('BMI Calc')),
       ),
       body: Column(
+        //crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
               child: Row(
@@ -35,8 +36,8 @@ class _InputPageState extends State<InputPage> {
                     });
                   },
                   colour: selectedGender == gender.male
-                      ? activeColor
-                      : inActiveColor,
+                      ? kactiveColor
+                      : kinActiveColor,
                   cardChild: IconContent(
                     iconAwesome: FontAwesomeIcons.mars,
                     iconText: 'MALE',
@@ -51,8 +52,8 @@ class _InputPageState extends State<InputPage> {
                     });
                   },
                   colour: selectedGender == gender.female
-                      ? activeColor
-                      : inActiveColor,
+                      ? kactiveColor
+                      : kinActiveColor,
                   cardChild: IconContent(
                     iconAwesome: FontAwesomeIcons.venus,
                     iconText: 'FEMALE',
@@ -64,21 +65,35 @@ class _InputPageState extends State<InputPage> {
           Expanded(
               child: ReusableCard(
             cardChild: Column(
-              children: [Text('High.')],
+              children: [
+                Text(
+                  'HEIGHT.',
+                  style: klabelTextStyle,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '180',
+                      style: TextStyle(
+                          fontSize: 50.0, fontWeight: FontWeight.w900),
+                    ),
+                  ],
+                )
+              ],
             ),
-            colour: activeColor,
+            colour: kactiveColor,
           )),
           Expanded(
               child: Row(
             children: [
               Expanded(
                 child: ReusableCard(
-                  colour: activeColor,
+                  colour: kactiveColor,
                 ),
               ),
               Expanded(
                   child: ReusableCard(
-                colour: activeColor,
+                colour: kactiveColor,
               ))
             ],
           )),
