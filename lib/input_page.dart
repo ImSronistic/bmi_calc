@@ -17,6 +17,7 @@ class _InputPageState extends State<InputPage> {
   gender selectedGender;
   int height = 150;
   int weight = 60;
+  int age = 18;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,18 +134,24 @@ class _InputPageState extends State<InputPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          FloatingActionButton(
-                            backgroundColor: Color(0xff4c4f5e),
-                            onPressed: null,
-                            child: Icon(Icons.add),
+                          RoundIconButton(
+                            icon: FontAwesomeIcons.minus,
+                            onPressed: () {
+                              setState(() {
+                                weight--;
+                              });
+                            },
                           ),
                           SizedBox(
-                            width: 10.0,
+                            width: 10,
                           ),
-                          FloatingActionButton(
-                            backgroundColor: Color(0xff4c4f5e),
-                            onPressed: null,
-                            child: Icon(Icons.add),
+                          RoundIconButton(
+                            icon: FontAwesomeIcons.plus,
+                            onPressed: () {
+                              setState(() {
+                                weight++;
+                              });
+                            },
                           ),
                         ],
                       ),
@@ -154,11 +161,58 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                   child: ReusableCard(
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Age',
+                      style: klabelTextStyle,
+                    ),
+                    Text(
+                      age.toString(),
+                      style: klabelNumStyle,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RoundIconButton(
+                            icon: FontAwesomeIcons.minus,
+                            onPressed: () {
+                              setState(() {
+                                age--;
+                              });
+                            }),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        RoundIconButton(
+                            icon: FontAwesomeIcons.plus,
+                            onPressed: () {
+                              setState(() {
+                                age++;
+                              });
+                            })
+                      ],
+                    )
+                  ],
+                ),
                 colour: kactiveColor,
               ))
             ],
           )),
           Container(
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                );
+              },
+              child: Text(
+                'Calculate Now!',
+                style: klabelTextStyle,
+              ),
+            ),
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
             height: 50.0,
@@ -171,10 +225,19 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIconButton extends StatelessWidget {
+  RoundIconButton({@required this.icon, @required this.onPressed});
+  final IconData icon;
+  final Function onPressed;
+
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      onPressed: null,
+      child: Icon(icon),
+      onPressed: onPressed,
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0,
+      ),
       shape: CircleBorder(),
       fillColor: Color(0xff4c4f5e),
     );
