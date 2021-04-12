@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SecondRoute extends StatelessWidget {
+class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Second Screen'),
+        title: Text('BMI Calc'),
       ),
       body: Center(
         child: TextButton(

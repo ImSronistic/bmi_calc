@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'extracted_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constants.dart';
-import 'routes_pages.dart';
+import 'results_page.dart';
 
 enum gender {
   female,
@@ -202,11 +202,11 @@ class _InputPageState extends State<InputPage> {
             ],
           )),
           Container(
-            child: TextButton(
-              onPressed: () {
+            child: GestureDetector(
+              onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => ResultPage()),
                 );
               },
               child: Text(
