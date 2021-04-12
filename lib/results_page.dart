@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
+import 'extracted_widgets.dart';
 
 class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calc'),
-      ),
-      body: Center(
-        child: TextButton(
-          child: Text('go back to Page 1'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        title: Text(
+          'BMI CALCULATOR',
         ),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              child: Text(
+                'Your Result',
+                style: klargeTextButton,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: )
+        ],
       ),
     );
   }

@@ -95,8 +95,8 @@ class _InputPageState extends State<InputPage> {
                   data: SliderTheme.of(context).copyWith(
                     activeTrackColor: Colors.white,
                     inactiveTrackColor: Color(0xff8d8e98),
-                    thumbColor: Color(0xFFEB1555),
-                    overlayColor: Color(0x29EB1555),
+                    thumbColor: Colors.deepOrangeAccent[700],
+                    overlayColor: Colors.orangeAccent,
                     thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
                     overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
                   ),
@@ -217,9 +217,10 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             margin: EdgeInsets.only(top: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             width: double.infinity,
             height: 50.0,
-            color: Color(0XFFBF360C),
+            color: Colors.deepOrangeAccent[700],
           )
         ],
       ),
