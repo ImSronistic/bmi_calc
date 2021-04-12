@@ -212,7 +212,7 @@ class _InputPageState extends State<InputPage> {
               child: Center(
                 child: Text(
                   'Calculate Now!',
-                  style: klabelTextStyle,
+                  style: klargeTextButton,
                 ),
               ),
             ),
