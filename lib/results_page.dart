@@ -13,18 +13,50 @@ class ResultPage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: Container(
-              child: Text(
-                'Your Result',
-                style: klargeTextButton,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  'Your Result',
+                  style: kTitleTextStyle,
+                ),
               ),
             ),
           ),
           Expanded(
             flex: 5,
-            child: )
+            child: ReusableCard(
+              colour: kactiveColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Normal',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    '18.3',
+                    style: kTitleTextStyle,
+                  ),
+                  Text(
+                    'your BMI result is low, you should eat more.',
+                    style: kBodyTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  BottomButton(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    buttonTitle: 'RECALCULATE',
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

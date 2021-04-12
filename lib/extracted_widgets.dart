@@ -28,6 +28,32 @@ class IconContent extends StatelessWidget {
   }
 }
 
+class BottomButton extends StatelessWidget {
+  BottomButton({@required this.onTap, @required this.buttonTitle});
+  final Function onTap;
+  final String buttonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Center(
+          child: Text(
+            buttonTitle,
+            style: klargeTextButton,
+          ),
+        ),
+      ),
+      margin: EdgeInsets.only(top: 10.0),
+      padding: EdgeInsets.only(bottom: 0.0),
+      width: double.infinity,
+      height: 50.0,
+      color: Colors.deepOrangeAccent[700],
+    );
+  }
+}
+
 class ReusableCard extends StatelessWidget {
   ReusableCard({@required this.colour, this.cardChild, this.gestureDetector});
   final Color colour;

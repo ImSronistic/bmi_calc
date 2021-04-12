@@ -201,26 +201,15 @@ class _InputPageState extends State<InputPage> {
               ))
             ],
           )),
-          Container(
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
+          BottomButton(
+            buttonTitle: 'CALCULATE',
+            onTap: () {
+              Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ResultPage()),
-                );
-              },
-              child: Center(
-                child: Text(
-                  'Calculate Now!',
-                  style: klargeTextButton,
-                ),
-              ),
-            ),
-            margin: EdgeInsets.only(top: 10.0),
-            padding: EdgeInsets.only(bottom: 10.0),
-            width: double.infinity,
-            height: 50.0,
-            color: Colors.deepOrangeAccent[700],
+                  MaterialPageRoute(
+                    builder: (context) => ResultPage(),
+                  ));
+            },
           )
         ],
       ),
