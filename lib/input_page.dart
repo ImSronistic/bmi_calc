@@ -209,9 +209,11 @@ class _InputPageState extends State<InputPage> {
                   MaterialPageRoute(builder: (context) => ResultPage()),
                 );
               },
-              child: Text(
-                'Calculate Now!',
-                style: klabelTextStyle,
+              child: Center(
+                child: Text(
+                  'Calculate Now!',
+                  style: klabelTextStyle,
+                ),
               ),
             ),
             margin: EdgeInsets.only(top: 10.0),
