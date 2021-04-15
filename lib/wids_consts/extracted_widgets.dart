@@ -1,7 +1,8 @@
-import 'package:bmi_calc/constants.dart';
+import 'package:bmi_calc/wids_consts/constants.dart';
 import 'package:flutter/material.dart';
 
-// our own Extracted Widgets
+// Our own Extracted Widgets
+// First Widget
 class IconContent extends StatelessWidget {
   //created constructors
   IconContent({@required this.iconAwesome, @required this.iconText});
@@ -28,6 +29,7 @@ class IconContent extends StatelessWidget {
   }
 }
 
+// Second Widget
 class BottomButton extends StatelessWidget {
   BottomButton({@required this.onTap, @required this.buttonTitle});
   final Function onTap;
@@ -54,6 +56,7 @@ class BottomButton extends StatelessWidget {
   }
 }
 
+// Thirst Widget
 class ReusableCard extends StatelessWidget {
   ReusableCard({@required this.colour, this.cardChild, this.gestureDetector});
   final Color colour;
@@ -76,6 +79,7 @@ class ReusableCard extends StatelessWidget {
   }
 }
 
+// Fourth Widget
 class RoundIconButton extends StatelessWidget {
   RoundIconButton({@required this.icon, @required this.onPressed});
   final IconData icon;

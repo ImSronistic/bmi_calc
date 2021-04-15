@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'extracted_widgets.dart';
+import '../wids_consts/constants.dart';
+import '../wids_consts/extracted_widgets.dart';
 
 class ResultPage extends StatelessWidget {
   @override
