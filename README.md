@@ -1,10 +1,11 @@
-# bmi_calc
+# BMI_Calc -By Srone
 
 A new Flutter project.
 
-## Getting Started
+<img src='https://user-images.githubusercontent.com/40174034/114865496-ee9e9380-9e0f-11eb-89c4-735696a11a2e.png' width="200"> <img src='https://user-images.githubusercontent.com/40174034/114865498-f100ed80-9e0f-11eb-8cff-f809228fadcb.png' width="200">
 
-This project is a starting point for a Flutter application.
+
+## Getting Started
 
 A few resources to get you started if this is your first Flutter project:
 
